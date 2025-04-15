@@ -1,0 +1,56 @@
+
+.flex{
+    display: flex;
+}
+
+
+.libicon{
+    display: flex;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.plus{
+    margin-left:160px;
+    font-size: 30px;
+    color:white;
+    cursor: pointer;
+
+
+}
+
+
+
+
+.playbtns{
+    color:black;
+    background-color:inherit;
+    border: none;
+
+}
+
+.musicplay-list .info{
+    font-size: 12px;
+    width: 90px;
+    margin-top: 10px;
+}
+
+
+
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+::-webkit-scrollbar-track {
+    background: gray; /* Background of the scrollbar track */
+    border-radius: 9px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: black; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 3px solid gray; /* Border around the thumb */
+    
+}
+
+

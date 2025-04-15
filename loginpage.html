@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Login</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .bd{
+        background-color:rgb(31, 155, 31);
+        width: 100%;
+        height: 80vh;
+        display: flex;
+
+    }
+    .box{
+        width: 20rem;
+        height: 30rem;
+        margin: 100px auto;
+        background-color: rgba(27, 23, 23 , 0.5);
+        padding: 20px;
+        border-radius: 3px;
+    }
+    .email{
+        width: 15rem;
+        height: 2rem;
+        border: 1px solid white;
+        background-color: rgb(61, 58, 58);
+        color: black;
+        border-radius: 5px;
+        position: relative;
+        margin-top: 10rem;
+        margin-left: 1rem;
+        padding: 10px;
+    }
+    .pswd{
+        width: 15rem;
+        height: 2rem;
+        border: 0.5px solid white;
+        background-color: rgb(61, 58, 58);
+        color: black;
+        border-radius: 5px; 
+        position: relative;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        padding: 10px;
+    }
+    .btn{
+        width: 15rem;
+        height: 2rem;
+        border-radius: 5px;
+        border: none;
+        position: relative;
+        margin-top: 80px;
+        margin-left: 1rem;
+    }
+
+    ::placeholder{
+        color: white;
+        position: fixed;
+        margin-left: 80px;
+        margin-top: -10px;
+        z-index: 100;
+    }
+   
+    img{
+        position: absolute;
+        margin-top: 35px;
+        margin-left: -35px;
+        cursor: pointer;
+    }
+
+</style>
+<body class="bd">
+    <div class="box">
+        <form action="">
+            <input type="text" placeholder="Email Id" required class="email">
+            <div class="">
+            <input type="password" placeholder="password" required class="pswd">
+            <img src="svg/seen.svg" alt="" class="seenbtn">
+            </div>
+          
+            <button class="btn">Log-in</button>
+        </form>
+
+    <script>
+        let seenbtn = document.querySelector(".seenbtn");
+        let pswd = document.querySelector(".pswd");
+        seenbtn.addEventListener("click",() => {
+         if(pswd.type == "password"){
+           pswd.type = "text";
+           seenbtn.src = "svg/unseen.svg"
+        }else{
+            pswd.type = "password";
+            seenbtn.src = "svg/seen.svg"
+        }
+        });
+
+    </script>
+</body>
+</html>

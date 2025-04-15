@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Sign-up</title>
+</head>
+<style>
+    *{
+        margin: 0;  
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .bd{
+        background-color:rgb(31, 155, 31);
+        width: 100%;
+        height: 80vh;
+        display: flex;
+
+    }
+    .box{
+        width: 20rem;
+        height: 30rem;
+        margin: 100px auto;
+        background-color:blue;
+        padding: 20px;
+        border-radius: 3px;
+    }
+    .email{
+        width: 15rem;
+        height: 2rem;
+        border: 1px solid white;
+        background-color: blue;
+        color: black;
+        border-radius: 5px;
+        position: relative;
+        margin-top: 10rem;
+        margin-left: 1rem;
+        padding: 10px;
+        box-sizing: border-box;
+        outline: none;
+    }
+    #pswd{
+        width: 15rem;
+        height: 2rem;
+        border: 0.5px solid white;
+        background-color: blue;
+        color: black;
+        border-radius: 5px; 
+        position: relative;
+        margin-top: 2rem;
+        margin-left: 1rem;
+        box-sizing: border-box;
+        padding: 10px;
+        outline: none;
+    }
+    .btn{
+        width: 15rem;
+        height: 2rem;
+        border-radius: 5px;
+        border: none;
+        position: relative;
+        margin-top: 80px;
+        margin-left: 1rem;
+    }
+    
+    img{
+        position: fixed;
+        margin-top: 35px;
+        margin-left: -35px;
+        cursor: pointer;
+    }
+
+    .placeh{
+        color: aliceblue;
+        position: absolute;
+        margin-top:37px;
+        margin-left: -220px;
+        transition: 0.3s;
+        pointer-events: none;
+    }
+    
+    <!-- .email:focus + .placeh,
+    .email:valid + .placeh
+    {
+       position: absolute;
+       top: 298px;
+       z-index: 1111;
+       background-color:blue;
+
+    } -->
+
+     #pswd:focus + .placeh,
+     #pswd:valid + .placeh
+     {
+        position: absolute;
+        top: 298px;
+        padding: 0 10px;
+        transform: scale(1.3);
+        background-color:blue;
+
+     }
+
+</style>
+<body class="bd">
+    <div class="box">
+        <form action="">
+            <input type="text" placeholder="Email Id" required class="email">
+            <div class="">
+            <input type="password" required id="pswd">
+            <label for="pswd"  class="placeh" > password</label>
+            <img src="svg/seen.svg" alt="" class="seenbtn">
+            </div>
+          
+            <button class="btn">sign-un</button>
+
+        </form>
+
+    <script>
+        let seenbtn = document.querySelector(".seenbtn");
+        let pswd = document.querySelector("#pswd");
+        seenbtn.addEventListener("click",() => {
+         if(pswd.type == "password"){
+           pswd.type = "text";
+           seenbtn.src = "svg/unseen.svg"
+        }else{
+            pswd.type = "password";
+            seenbtn.src = "svg/seen.svg"
+        }
+        });
+
+    </script>
+</body>
+</html>
