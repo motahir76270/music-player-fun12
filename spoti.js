@@ -1,6 +1,6 @@
 
     async function getsongs() {
-        let a = await fetch("http://127.0.0.1:5501/mp3Songs/");
+        let a = await fetch("http://127.0.0.1:5500/mp3Songs/");
         let response = await a.text();
         
         console.log(response);
@@ -50,7 +50,7 @@
     //let curntsong = new Audio();
     curntsong.src = `mp3Songs/${track}`;  
     curntsong.play()
-    play.src = "pause.svg";
+        play.src = "./svg/pause.svg";
       document.querySelector('.songinfo').innerHTML = track;
       document.querySelector('.songtime').innerHTML = "00:00 / 00:00";
 
@@ -65,14 +65,14 @@
         let musicURL = document.querySelector(".musicplay-list").getElementsByTagName("ul")[0] ;
         for ( const song of songs ){
             musicURL.innerHTML =  musicURL.innerHTML + `<li>
-                    <img src="music.svg" alt="">
+                    <img src="./svg/music.svg" alt="">
                                 <div class="info">
                                     <div id="songname"> ${song.replaceAll("%20", " ").replace(" (PagalWorld.com.sb)","")}  
                                     </div>
                                     <div> Tahir khan </div>
                                 </div>
                                 <span style="margin-top: 12px;">Play Now</span>
-                                <img src="playnow.svg" class="playbar-btn" alt="">
+                                <img src="./svg/playnow.svg" class="playbar-btn" alt="">
                                     </li>` ;
         } 
 
@@ -99,11 +99,11 @@
         console.log("clicked")
     if(curntsong.pause() ) {
      curntsong.play();
-     play.src = "pause.svg";
+        play.src = "./svg/pause.svg";
     }
     if( curntsong.play()) {
      curntsong.pause();
-     play.src = "playnow.svg";
+        play.src = "./svg/playnow.svg";
     }
     });
 
@@ -138,9 +138,9 @@
      darkmode.addEventListener("click", () => {
         document.body.classList.toggle("dark-theme")
        if(document.body.classList.contains("dark-theme")){
-           darkmode.src ="darkmode.svg";
+           darkmode.src ="./svg/darkmode.svg";
        }else{
-        darkmode.src ="lightmode.svg";
+           darkmode.src ="./svg/lightmode.svg";
        }
      });
 
