@@ -4,6 +4,7 @@
         console.log(a);
         let response = await a.text();
         
+        
         console.log(response);
         let div = document.createElement("div");
         div.innerHTML = response;
