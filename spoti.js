@@ -1,6 +1,7 @@
 
     async function getsongs() {
         let a = await fetch("http://127.0.0.1:5500/mp3Songs/");
+        console.log(a);
         let response = await a.text();
         
         console.log(response);
