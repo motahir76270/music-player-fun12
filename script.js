@@ -1,6 +1,7 @@
 
     async function getsongs() {
-        let a = await fetch("http://127.0.0.1:5500/mp3Songs/");
+        const url = "https://motahir76270.github.io/music-player-fun12/" || "https://spotify-b8c9.onrender.com/"
+        let a = await fetch(`${url}/mp3Songs/`);
         console.log(a);
         let response = await a.text();
         
