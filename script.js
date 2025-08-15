@@ -1,7 +1,7 @@
 
 
     async function getsongs() {
-        let a = await fetch("https://spotify-b8c9.onrender.com//mp3Songs/");
+        let a = await fetch("https://spotify-b8c9.onrender.com/mp3Songs/");
         console.log(a);
         let response = await a.text();
         
